@@ -1,13 +1,21 @@
 # Seth Anderson's Schooner Dice Submission
 
 ## Test Live Online
-- View interactive API docs at:
-  - **Swagger UI**: [https://schooner-dice.onrender.com/docs](https://schooner-dice.onrender.com/docs)
+View interactive API docs in
+  **Swagger UI**: [https://schooner-dice.onrender.com/docs](https://schooner-dice.onrender.com/docs)
 
-  ![alt text](images/image.png)
-  ![alt text](images/image-1.png)
-  ![alt text](images/image-2.png)
-  ![alt text](images/image-3.png)
+
+### /score Call and Response
+  <p float="left" >
+    <img src="images/image.png" style="vertical-align:top" alt="score call" width="300"/>
+    <img src="images/image-1.png" style="vertical-align:top" alt="score resp" width="300"/>
+  </p>
+
+### /topCategories Call and Response
+  <p float="left">
+    <img src="images/image-2.png" style="vertical-align:top" alt="cats call" width="300"/>
+  <img src="images/image-3.png" style="vertical-align:top" alt="cats resp" width="300"/>
+  </p>
 
 ## Requirements
 
