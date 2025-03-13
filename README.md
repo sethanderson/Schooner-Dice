@@ -1,5 +1,14 @@
 # Seth Anderson's Schooner Dice Submission
 
+## Test Live Online
+- View interactive API docs at:
+  - **Swagger UI**: [https://schooner-dice.onrender.com/docs](https://schooner-dice.onrender.com/docs)
+
+  ![alt text](images/image.png)
+  ![alt text](images/image-1.png)
+  ![alt text](images/image-2.png)
+  ![alt text](images/image-3.png)
+
 ## Requirements
 
 - **Python 3.12+** → [Download Python](https://www.python.org/downloads/)
@@ -40,7 +49,6 @@ fastapi dev main.py
 - The server will start at [**http://127.0.0.1:8000/**](http://127.0.0.1:8000/)
 - View interactive API docs at:
   - **Swagger UI**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-  - **Redoc UI**: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
 
 ## Running Tests
 
