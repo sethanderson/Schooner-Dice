@@ -23,6 +23,15 @@ class test_full_house(TestCase):
         expected_score = 0
         assert score == expected_score
 
+    def test_score_category_3(self):
+        category = Category.FULL_HOUSE
+        dice_roll = [1, 1, 2, 1, 1]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 0
+        assert score == expected_score
+
 
 # singles (ONES, TWOS, THREES...) - sum of just those numbers
 class test_singles(TestCase):
@@ -101,37 +110,248 @@ class test_singles(TestCase):
 
 # THREE OF A KIND - sum of all dice
 class test_three_of_a_kind(TestCase):
-    pass
+    def test_score_category_1(self):
+        category = Category.THREE_OF_A_KIND
+        dice_roll = [1, 1, 2, 1, 1]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 6
+        assert score == expected_score
+
+    def test_score_category_2(self):
+        category = Category.THREE_OF_A_KIND
+        dice_roll = [3, 4, 2, 1, 1]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 0
+        assert score == expected_score
+
+    def test_score_category_3(self):
+        category = Category.THREE_OF_A_KIND
+        dice_roll = [8, 8, 8, 8, 8]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 40
+        assert score == expected_score
 
 
 # FOUR OF A KIND - sum of all dice
 class test_four_of_a_kind(TestCase):
-    pass
+    def test_score_category_1(self):
+        category = Category.FOUR_OF_A_KIND
+        dice_roll = [1, 1, 2, 1, 1]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 6
+        assert score == expected_score
+
+    def test_score_category_2(self):
+        category = Category.FOUR_OF_A_KIND
+        dice_roll = [3, 4, 2, 1, 1]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 0
+        assert score == expected_score
+
+    def test_score_category_3(self):
+        category = Category.FOUR_OF_A_KIND
+        dice_roll = [8, 8, 8, 8, 8]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 40
+        assert score == expected_score
+
+    def test_score_category_4(self):
+        category = Category.FOUR_OF_A_KIND
+        dice_roll = [1, 1, 8, 8, 8]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 0
+        assert score == expected_score
 
 
 # SMALL STRAIGHT - 30 if 4 in a sequence
 class test_small_straight(TestCase):
-    pass
+    def test_score_category_1(self):
+        category = Category.SMALL_STRAIGHT
+        dice_roll = [1, 1, 2, 1, 1]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 0
+        assert score == expected_score
+
+    def test_score_category_2(self):
+        category = Category.SMALL_STRAIGHT
+        dice_roll = [1, 4, 2, 1, 3]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 30
+        assert score == expected_score
+
+    def test_score_category_3(self):
+        category = Category.SMALL_STRAIGHT
+        dice_roll = [5, 4, 2, 1, 3]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 30
+        assert score == expected_score
 
 
 # LARGE STRAIGHT - 40 if 5 in a sequence
 class test_large_straight(TestCase):
-    pass
+    def test_score_category_1(self):
+        category = Category.LARGE_STRAIGHT
+        dice_roll = [1, 1, 2, 1, 1]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 0
+        assert score == expected_score
+
+    def test_score_category_2(self):
+        category = Category.LARGE_STRAIGHT
+        dice_roll = [1, 4, 2, 1, 3]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 0
+        assert score == expected_score
+
+    def test_score_category_3(self):
+        category = Category.LARGE_STRAIGHT
+        dice_roll = [5, 4, 2, 1, 3]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 40
+        assert score == expected_score
 
 
 # ALL DIFFERENT - 35 points if all different
 class test_all_different(TestCase):
-    pass
+    def test_score_category_1(self):
+        category = Category.ALL_DIFFERENT
+        dice_roll = [1, 1, 2, 1, 1]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 0
+        assert score == expected_score
+
+    def test_score_category_2(self):
+        category = Category.ALL_DIFFERENT
+        dice_roll = [1, 4, 2, 1, 3]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 0
+        assert score == expected_score
+
+    def test_score_category_3(self):
+        category = Category.ALL_DIFFERENT
+        dice_roll = [5, 4, 2, 1, 3]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 35
+        assert score == expected_score
 
 
 # SCHOONER - 50 points if all 5 are the same
 class test_schooner(TestCase):
-    pass
+    def test_score_category_1(self):
+        category = Category.SCHOONER
+        dice_roll = [1, 1, 2, 1, 1]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 0
+        assert score == expected_score
+
+    def test_score_category_2(self):
+        category = Category.SCHOONER
+        dice_roll = [1, 4, 2, 1, 3]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 0
+        assert score == expected_score
+
+    def test_score_category_3(self):
+        category = Category.SCHOONER
+        dice_roll = [5, 4, 2, 1, 3]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 0
+        assert score == expected_score
+
+    def test_score_category_4(self):
+        category = Category.SCHOONER
+        dice_roll = [8, 8, 8, 8, 8]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 50
+        assert score == expected_score
 
 
 # CHANCE - always give sume of dice
 class test_chance(TestCase):
-    pass
+    def test_score_category_1(self):
+        category = Category.CHANCE
+        dice_roll = [1, 1, 2, 1, 1]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 6
+        assert score == expected_score
+
+    def test_score_category_2(self):
+        category = Category.CHANCE
+        dice_roll = [1, 4, 2, 1, 3]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 11
+        assert score == expected_score
+
+    def test_score_category_3(self):
+        category = Category.CHANCE
+        dice_roll = [5, 4, 2, 1, 3]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 15
+        assert score == expected_score
+
+    def test_score_category_4(self):
+        category = Category.CHANCE
+        dice_roll = [8, 8, 8, 8, 8]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 40
+        assert score == expected_score
+
+    def test_score_category_5(self):
+        category = Category.CHANCE
+        dice_roll = [1, 1, 1, 1, 8]
+        scoring = Scoring(dice_roll)
+        score = scoring.score_category(category)
+
+        expected_score = 12
+        assert score == expected_score
 
 
 class test_get_top_categories(TestCase):
@@ -173,4 +393,14 @@ class test_get_top_categories(TestCase):
         top_categories = sorted(scoring.get_top_categories())
 
         expected_top_categories = sorted([Category.SCHOONER])
+        assert top_categories == expected_top_categories
+
+    def test_6(self):
+        dice_roll = [1, 1, 1, 1, 8]
+        scoring = Scoring(dice_roll)
+        top_categories = sorted(scoring.get_top_categories())
+
+        expected_top_categories = sorted(
+            [Category.FOUR_OF_A_KIND, Category.THREE_OF_A_KIND, Category.CHANCE]
+        )
         assert top_categories == expected_top_categories
