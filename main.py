@@ -7,11 +7,6 @@ import services.schooner as schooner
 app = FastAPI()
 
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-
 @app.get("/score/")
 async def score(
     category: Category, diceRoll: List[int] = Query(min_length=5, max_length=5)

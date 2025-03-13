@@ -142,7 +142,7 @@ class test_get_top_categories(TestCase):
 
         expected_top_categories = sorted([Category.THREE_OF_A_KIND, Category.CHANCE])
         assert top_categories == expected_top_categories
-    
+
     def test_2(self):
         dice_roll = [3, 3, 3, 3, 3]
         scoring = Scoring(dice_roll)
@@ -150,7 +150,7 @@ class test_get_top_categories(TestCase):
 
         expected_top_categories = sorted([Category.SCHOONER])
         assert top_categories == expected_top_categories
-        
+
     def test_3(self):
         dice_roll = [2, 3, 1, 6, 4]
         scoring = Scoring(dice_roll)
@@ -158,7 +158,7 @@ class test_get_top_categories(TestCase):
 
         expected_top_categories = sorted([Category.ALL_DIFFERENT])
         assert top_categories == expected_top_categories
-    
+
     def test_4(self):
         dice_roll = [2, 3, 1, 5, 4]
         scoring = Scoring(dice_roll)
@@ -166,7 +166,7 @@ class test_get_top_categories(TestCase):
 
         expected_top_categories = sorted([Category.LARGE_STRAIGHT])
         assert top_categories == expected_top_categories
-    
+
     def test_5(self):
         dice_roll = [8, 8, 8, 8, 8]
         scoring = Scoring(dice_roll)
