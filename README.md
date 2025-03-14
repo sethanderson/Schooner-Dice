@@ -76,12 +76,12 @@ black .
 
 ```
 Schooner Dice
- ┓ services             # Business logic
- ┃ ┗ category.py        # 
- ┃ ┗ schooner.py        # 
- ┃ ┗ scoring.py         # 
- ┓ tests                # Unit tests
- ┃ ┗ test_scoring.py    # 
+ ┓ services
+ ┃ ┗ category.py        # Enum Category
+ ┃ ┗ schooner.py        # Where the two main functions live
+ ┃ ┗ scoring.py         # Business logic
+ ┓ tests
+ ┃ ┗ test_scoring.py    # Unit tests for scoring.py
  ┗ main.py              # FastAPI entry point
  ┗ requirements.txt     # Python dependencies
  ┗ README.md            # Project setup guide
